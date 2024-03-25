@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CourseProject
 {
-    public partial class Form1 : Form
+    public partial class Income : Form
     {
-        public Form1()
+        public Income()
         {
             InitializeComponent();
         }

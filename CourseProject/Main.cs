@@ -37,7 +37,7 @@ namespace CourseProject
                 string commandLine = @"SELECT SUM(Sum) FROM Action";
                 SqlCommand cmd = new SqlCommand(commandLine, connection);
                 decimal sum = (decimal)cmd.ExecuteScalar();
-                rtbBalance.Text = $"Баланс: {sum}";
+                rtbBalance.Text = $"{sum}";
                 rtbBalance.SelectionAlignment = HorizontalAlignment.Center;
                 if (sum < 0) { rtbBalance.ForeColor = Color.Red; }
                 else { rtbBalance.ForeColor = Color.Green; }
@@ -58,7 +58,7 @@ namespace CourseProject
             try
             {
                 string commandLine = @"SELECT 
-                                    CategoryName, Sum, Date, Comment
+                                    CategoryName AS 'Категория', Sum AS 'Сумма', Date AS 'Дата', Comment AS 'Коментарии'
                                     FROM Action, Category WHERE Category = CategoryID";
                 SqlCommand cmd = new SqlCommand(commandLine, connection);
                 connection.Open();
@@ -109,6 +109,39 @@ namespace CourseProject
         {
             Category category = new Category();
             category.Show();
+        }
+
+        private void rtbSearch_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string searchText = rtbSearch.Text;
+                string query = "SELECT CategoryName AS 'Категория', Sum AS 'Сумма', Date AS 'Дата', Comment AS 'Коментарии' FROM Action JOIN Category ON Category = CategoryID WHERE CategoryName LIKE @searchText";
+                SqlCommand cmd = new SqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@searchText", "%" + searchText + "%");
+                connection.Open();
+                reader = cmd.ExecuteReader();
+                table = new DataTable();
+                for (int i = 0; i < reader.FieldCount; i++) table.Columns.Add(reader.GetName(i));
+                while (reader.Read())
+                {
+                    DataRow row = table.NewRow();
+                    for (int i = 0; i < reader.FieldCount; i++) row[i] = reader[i];
+                    table.Rows.Add(row);
+                }
+                dgvInfo.DataSource = table;
+                reader.Close();
+                connection.Close();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(this, exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (connection != null) connection.Close();
+                if (reader != null) reader.Close();
+            }
         }
     }
 }

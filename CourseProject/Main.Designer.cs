@@ -41,7 +41,8 @@
             // 
             // buttonIncome
             // 
-            this.buttonIncome.Location = new System.Drawing.Point(25, 42);
+            this.buttonIncome.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonIncome.Location = new System.Drawing.Point(25, 52);
             this.buttonIncome.Name = "buttonIncome";
             this.buttonIncome.Size = new System.Drawing.Size(180, 40);
             this.buttonIncome.TabIndex = 0;
@@ -51,7 +52,8 @@
             // 
             // buttonExpense
             // 
-            this.buttonExpense.Location = new System.Drawing.Point(639, 42);
+            this.buttonExpense.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonExpense.Location = new System.Drawing.Point(639, 52);
             this.buttonExpense.Name = "buttonExpense";
             this.buttonExpense.Size = new System.Drawing.Size(180, 40);
             this.buttonExpense.TabIndex = 1;
@@ -62,6 +64,7 @@
             // dgvInfo
             // 
             this.dgvInfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvInfo.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgvInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInfo.Location = new System.Drawing.Point(25, 146);
             this.dgvInfo.Name = "dgvInfo";
@@ -72,7 +75,8 @@
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(429, 42);
+            this.buttonDelete.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonDelete.Location = new System.Drawing.Point(440, 52);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(180, 40);
             this.buttonDelete.TabIndex = 5;
@@ -82,25 +86,30 @@
             // 
             // rtbSearch
             // 
+            this.rtbSearch.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.rtbSearch.Location = new System.Drawing.Point(25, 103);
             this.rtbSearch.Name = "rtbSearch";
-            this.rtbSearch.Size = new System.Drawing.Size(794, 24);
+            this.rtbSearch.Size = new System.Drawing.Size(794, 34);
             this.rtbSearch.TabIndex = 6;
-            this.rtbSearch.Text = "Поиск";
+            this.rtbSearch.Text = "Поиск:";
             // 
             // rtbBalance
             // 
+            this.rtbBalance.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.rtbBalance.Location = new System.Drawing.Point(25, 12);
             this.rtbBalance.Name = "rtbBalance";
-            this.rtbBalance.Size = new System.Drawing.Size(794, 24);
+            this.rtbBalance.ReadOnly = true;
+            this.rtbBalance.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.rtbBalance.Size = new System.Drawing.Size(794, 34);
             this.rtbBalance.TabIndex = 2;
-            this.rtbBalance.Text = "Баланс";
+            this.rtbBalance.Text = "Баланс:";
             // 
             // btnAddCategory
             // 
-            this.btnAddCategory.Location = new System.Drawing.Point(227, 42);
+            this.btnAddCategory.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnAddCategory.Location = new System.Drawing.Point(227, 52);
             this.btnAddCategory.Name = "btnAddCategory";
-            this.btnAddCategory.Size = new System.Drawing.Size(180, 40);
+            this.btnAddCategory.Size = new System.Drawing.Size(196, 40);
             this.btnAddCategory.TabIndex = 7;
             this.btnAddCategory.Text = "Добавить категорию";
             this.btnAddCategory.UseVisualStyleBackColor = true;

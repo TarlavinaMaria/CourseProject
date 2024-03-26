@@ -37,15 +37,10 @@ namespace CourseProject
                 string commandLine = @"SELECT SUM(Sum) FROM Action";
                 SqlCommand cmd = new SqlCommand(commandLine, connection);
                 decimal sum = (decimal)cmd.ExecuteScalar();
-                if (sum == 0)
-                {
-                    rtbBalance.Text = "Баланс: 0 рублей";
-                    return;
-                }
-                else
-                {
-                    rtbBalance.Text = $"Баланс: {sum}";
-                }
+                rtbBalance.Text = $"Баланс: {sum}";
+                rtbBalance.SelectionAlignment = HorizontalAlignment.Center;
+                if (sum < 0) { rtbBalance.ForeColor = Color.Red; }
+                else { rtbBalance.ForeColor = Color.Green; }
                 connection.Close();
             }
             catch (Exception exception)

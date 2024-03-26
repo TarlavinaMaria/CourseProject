@@ -41,9 +41,9 @@
             // 
             // buttonIncome
             // 
-            this.buttonIncome.Location = new System.Drawing.Point(25, 46);
+            this.buttonIncome.Location = new System.Drawing.Point(25, 42);
             this.buttonIncome.Name = "buttonIncome";
-            this.buttonIncome.Size = new System.Drawing.Size(130, 40);
+            this.buttonIncome.Size = new System.Drawing.Size(180, 40);
             this.buttonIncome.TabIndex = 0;
             this.buttonIncome.Text = "Доход";
             this.buttonIncome.UseVisualStyleBackColor = true;
@@ -51,9 +51,9 @@
             // 
             // buttonExpense
             // 
-            this.buttonExpense.Location = new System.Drawing.Point(510, 46);
+            this.buttonExpense.Location = new System.Drawing.Point(639, 42);
             this.buttonExpense.Name = "buttonExpense";
-            this.buttonExpense.Size = new System.Drawing.Size(130, 40);
+            this.buttonExpense.Size = new System.Drawing.Size(180, 40);
             this.buttonExpense.TabIndex = 1;
             this.buttonExpense.Text = "Расход";
             this.buttonExpense.UseVisualStyleBackColor = true;
@@ -61,17 +61,20 @@
             // 
             // dgvInfo
             // 
+            this.dgvInfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInfo.Location = new System.Drawing.Point(25, 146);
             this.dgvInfo.Name = "dgvInfo";
-            this.dgvInfo.Size = new System.Drawing.Size(615, 354);
+            this.dgvInfo.ReadOnly = true;
+            this.dgvInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvInfo.Size = new System.Drawing.Size(794, 354);
             this.dgvInfo.TabIndex = 3;
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(374, 46);
+            this.buttonDelete.Location = new System.Drawing.Point(429, 42);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(130, 40);
+            this.buttonDelete.Size = new System.Drawing.Size(180, 40);
             this.buttonDelete.TabIndex = 5;
             this.buttonDelete.Text = "Удалить";
             this.buttonDelete.UseVisualStyleBackColor = true;
@@ -81,7 +84,7 @@
             // 
             this.rtbSearch.Location = new System.Drawing.Point(25, 103);
             this.rtbSearch.Name = "rtbSearch";
-            this.rtbSearch.Size = new System.Drawing.Size(615, 24);
+            this.rtbSearch.Size = new System.Drawing.Size(794, 24);
             this.rtbSearch.TabIndex = 6;
             this.rtbSearch.Text = "Поиск";
             // 
@@ -89,15 +92,15 @@
             // 
             this.rtbBalance.Location = new System.Drawing.Point(25, 12);
             this.rtbBalance.Name = "rtbBalance";
-            this.rtbBalance.Size = new System.Drawing.Size(615, 24);
+            this.rtbBalance.Size = new System.Drawing.Size(794, 24);
             this.rtbBalance.TabIndex = 2;
             this.rtbBalance.Text = "Баланс";
             // 
             // btnAddCategory
             // 
-            this.btnAddCategory.Location = new System.Drawing.Point(161, 46);
+            this.btnAddCategory.Location = new System.Drawing.Point(227, 42);
             this.btnAddCategory.Name = "btnAddCategory";
-            this.btnAddCategory.Size = new System.Drawing.Size(207, 40);
+            this.btnAddCategory.Size = new System.Drawing.Size(180, 40);
             this.btnAddCategory.TabIndex = 7;
             this.btnAddCategory.Text = "Добавить категорию";
             this.btnAddCategory.UseVisualStyleBackColor = true;
@@ -107,7 +110,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(668, 512);
+            this.ClientSize = new System.Drawing.Size(831, 512);
             this.Controls.Add(this.btnAddCategory);
             this.Controls.Add(this.rtbSearch);
             this.Controls.Add(this.buttonDelete);

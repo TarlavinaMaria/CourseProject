@@ -74,6 +74,7 @@
             this.dgvInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvInfo.Size = new System.Drawing.Size(807, 354);
             this.dgvInfo.TabIndex = 3;
+            this.dgvInfo.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInfo_CellDoubleClick);
             // 
             // buttonDelete
             // 

@@ -143,5 +143,24 @@ namespace CourseProject
                 if (reader != null) reader.Close();
             }
         }
+
+        private void dgvInfo_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                string cellValue = dgvInfo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                Info info = new Info(cellValue);
+                info.Show();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(this, exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (connection != null) connection.Close();
+                if (reader != null) reader.Close();
+            }
+        }
     }
 }

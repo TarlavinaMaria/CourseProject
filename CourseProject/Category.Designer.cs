@@ -68,6 +68,7 @@
             this.btnExit.TabIndex = 3;
             this.btnExit.Text = "Закрыть";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // Category
             // 

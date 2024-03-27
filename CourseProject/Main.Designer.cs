@@ -71,8 +71,7 @@
             this.dgvInfo.Location = new System.Drawing.Point(12, 146);
             this.dgvInfo.Name = "dgvInfo";
             this.dgvInfo.ReadOnly = true;
-            this.dgvInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInfo.Size = new System.Drawing.Size(807, 354);
+            this.dgvInfo.Size = new System.Drawing.Size(807, 403);
             this.dgvInfo.TabIndex = 3;
             this.dgvInfo.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInfo_CellDoubleClick);
             // 
@@ -143,7 +142,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 512);
+            this.ClientSize = new System.Drawing.Size(831, 561);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAddCategory);
@@ -156,6 +155,8 @@
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.MaximumSize = new System.Drawing.Size(847, 600);
+            this.MinimumSize = new System.Drawing.Size(847, 600);
             this.Name = "Main";
             this.Text = "Учет доходов и расходов";
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfo)).EndInit();

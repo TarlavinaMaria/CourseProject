@@ -57,7 +57,7 @@ namespace CourseProject
         {
             try
             {
-                string commandLine = @"SELECT 
+                string commandLine = @"SELECT ActionID AS '№',
                                     CategoryName AS 'Категория', Sum AS 'Сумма', Date AS 'Дата', Comment AS 'Коментарии'
                                     FROM Action, Category WHERE Category = CategoryID";
                 SqlCommand cmd = new SqlCommand(commandLine, connection);
@@ -70,6 +70,7 @@ namespace CourseProject
                     DataRow row = table.NewRow();
                     for (int i = 0; i < reader.FieldCount; i++) row[i] = reader[i];
                     table.Rows.Add(row);
+                    row["Дата"] = Convert.ToDateTime(reader["Дата"]).ToString("dd.MM.yyyy");
                 }
                 dgvInfo.DataSource = table;
 
@@ -116,7 +117,7 @@ namespace CourseProject
             try
             {
                 string searchText = rtbSearch.Text;
-                string query = "SELECT CategoryName AS 'Категория', Sum AS 'Сумма', Date AS 'Дата', Comment AS 'Коментарии' FROM Action JOIN Category ON Category = CategoryID WHERE CategoryName LIKE @searchText";
+                string query = "SELECT ActionID AS '№', CategoryName AS 'Категория', Sum AS 'Сумма', Date AS 'Дата', Comment AS 'Коментарии' FROM Action JOIN Category ON Category = CategoryID WHERE CategoryName LIKE @searchText";
                 SqlCommand cmd = new SqlCommand(query, connection);
                 cmd.Parameters.AddWithValue("@searchText", "%" + searchText + "%");
                 connection.Open();
@@ -128,6 +129,7 @@ namespace CourseProject
                     DataRow row = table.NewRow();
                     for (int i = 0; i < reader.FieldCount; i++) row[i] = reader[i];
                     table.Rows.Add(row);
+                    row["Дата"] = Convert.ToDateTime(reader["Дата"]).ToString("dd.MM.yyyy");
                 }
                 dgvInfo.DataSource = table;
                 reader.Close();
@@ -148,7 +150,7 @@ namespace CourseProject
         {
             try
             {
-                string cellValue = dgvInfo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                string cellValue = dgvInfo.Rows[e.RowIndex].Cells[0].Value.ToString();
                 Info info = new Info(cellValue);
                 info.Show();
             }

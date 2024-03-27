@@ -16,5 +16,15 @@ namespace CourseProject
         {
             InitializeComponent();
         }
-    }
+
+		private void btnAddIncome_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void btnCloseIncome_Click(object sender, EventArgs e)
+		{
+
+		}
+	}
 }

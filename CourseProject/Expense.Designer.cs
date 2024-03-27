@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
 			this.label4 = new System.Windows.Forms.Label();
-			this.rtbCommentIncome = new System.Windows.Forms.RichTextBox();
-			this.btnCloseIncome = new System.Windows.Forms.Button();
-			this.btnAddIncome = new System.Windows.Forms.Button();
+			this.rtbCommentExpense = new System.Windows.Forms.RichTextBox();
+			this.btnCloseExpense = new System.Windows.Forms.Button();
+			this.btnAddExpense = new System.Windows.Forms.Button();
 			this.label3 = new System.Windows.Forms.Label();
-			this.dtpDataIncome = new System.Windows.Forms.DateTimePicker();
-			this.rtbSumIncome = new System.Windows.Forms.RichTextBox();
+			this.dtpDataExpense = new System.Windows.Forms.DateTimePicker();
+			this.rtbSumExpense = new System.Windows.Forms.RichTextBox();
 			this.label2 = new System.Windows.Forms.Label();
-			this.cbCategoryIncome = new System.Windows.Forms.ComboBox();
+			this.cbCategoryExpense = new System.Windows.Forms.ComboBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
@@ -50,37 +50,37 @@
 			this.label4.TabIndex = 23;
 			this.label4.Text = "Коментарии:";
 			// 
-			// rtbCommentIncome
+			// rtbCommentExpense
 			// 
-			this.rtbCommentIncome.Location = new System.Drawing.Point(148, 234);
-			this.rtbCommentIncome.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-			this.rtbCommentIncome.Name = "rtbCommentIncome";
-			this.rtbCommentIncome.Size = new System.Drawing.Size(376, 82);
-			this.rtbCommentIncome.TabIndex = 22;
-			this.rtbCommentIncome.Text = "";
+			this.rtbCommentExpense.Location = new System.Drawing.Point(148, 234);
+			this.rtbCommentExpense.Margin = new System.Windows.Forms.Padding(6);
+			this.rtbCommentExpense.Name = "rtbCommentExpense";
+			this.rtbCommentExpense.Size = new System.Drawing.Size(376, 82);
+			this.rtbCommentExpense.TabIndex = 22;
+			this.rtbCommentExpense.Text = "";
 			// 
-			// btnCloseIncome
+			// btnCloseExpense
 			// 
-			this.btnCloseIncome.Location = new System.Drawing.Point(368, 328);
-			this.btnCloseIncome.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-			this.btnCloseIncome.Name = "btnCloseIncome";
-			this.btnCloseIncome.Size = new System.Drawing.Size(156, 43);
-			this.btnCloseIncome.TabIndex = 21;
-			this.btnCloseIncome.Text = "Закрыть";
-			this.btnCloseIncome.UseVisualStyleBackColor = true;
-			this.btnCloseIncome.Click += new System.EventHandler(this.btnCloseIncome_Click);
+			this.btnCloseExpense.Location = new System.Drawing.Point(368, 328);
+			this.btnCloseExpense.Margin = new System.Windows.Forms.Padding(6);
+			this.btnCloseExpense.Name = "btnCloseExpense";
+			this.btnCloseExpense.Size = new System.Drawing.Size(156, 43);
+			this.btnCloseExpense.TabIndex = 21;
+			this.btnCloseExpense.Text = "Закрыть";
+			this.btnCloseExpense.UseVisualStyleBackColor = true;
+			this.btnCloseExpense.Click += new System.EventHandler(this.btnCloseExpense_Click);
 			// 
-			// btnAddIncome
+			// btnAddExpense
 			// 
-			this.btnAddIncome.DialogResult = System.Windows.Forms.DialogResult.OK;
-			this.btnAddIncome.Location = new System.Drawing.Point(215, 328);
-			this.btnAddIncome.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-			this.btnAddIncome.Name = "btnAddIncome";
-			this.btnAddIncome.Size = new System.Drawing.Size(130, 43);
-			this.btnAddIncome.TabIndex = 20;
-			this.btnAddIncome.Text = "Добавить";
-			this.btnAddIncome.UseVisualStyleBackColor = true;
-			this.btnAddIncome.Click += new System.EventHandler(this.btnAddIncome_Click);
+			this.btnAddExpense.DialogResult = System.Windows.Forms.DialogResult.OK;
+			this.btnAddExpense.Location = new System.Drawing.Point(215, 328);
+			this.btnAddExpense.Margin = new System.Windows.Forms.Padding(6);
+			this.btnAddExpense.Name = "btnAddExpense";
+			this.btnAddExpense.Size = new System.Drawing.Size(130, 43);
+			this.btnAddExpense.TabIndex = 20;
+			this.btnAddExpense.Text = "Добавить";
+			this.btnAddExpense.UseVisualStyleBackColor = true;
+			this.btnAddExpense.Click += new System.EventHandler(this.btnAddExpense_Click);
 			// 
 			// label3
 			// 
@@ -92,22 +92,22 @@
 			this.label3.TabIndex = 19;
 			this.label3.Text = "Дата:";
 			// 
-			// dtpDataIncome
+			// dtpDataExpense
 			// 
-			this.dtpDataIncome.Location = new System.Drawing.Point(148, 172);
-			this.dtpDataIncome.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-			this.dtpDataIncome.Name = "dtpDataIncome";
-			this.dtpDataIncome.Size = new System.Drawing.Size(376, 29);
-			this.dtpDataIncome.TabIndex = 18;
+			this.dtpDataExpense.Location = new System.Drawing.Point(148, 172);
+			this.dtpDataExpense.Margin = new System.Windows.Forms.Padding(6);
+			this.dtpDataExpense.Name = "dtpDataExpense";
+			this.dtpDataExpense.Size = new System.Drawing.Size(376, 29);
+			this.dtpDataExpense.TabIndex = 18;
 			// 
-			// rtbSumIncome
+			// rtbSumExpense
 			// 
-			this.rtbSumIncome.Location = new System.Drawing.Point(148, 97);
-			this.rtbSumIncome.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
-			this.rtbSumIncome.Name = "rtbSumIncome";
-			this.rtbSumIncome.Size = new System.Drawing.Size(376, 42);
-			this.rtbSumIncome.TabIndex = 17;
-			this.rtbSumIncome.Text = "";
+			this.rtbSumExpense.Location = new System.Drawing.Point(148, 97);
+			this.rtbSumExpense.Margin = new System.Windows.Forms.Padding(7);
+			this.rtbSumExpense.Name = "rtbSumExpense";
+			this.rtbSumExpense.Size = new System.Drawing.Size(376, 42);
+			this.rtbSumExpense.TabIndex = 17;
+			this.rtbSumExpense.Text = "";
 			// 
 			// label2
 			// 
@@ -119,14 +119,14 @@
 			this.label2.TabIndex = 16;
 			this.label2.Text = "Сумма:";
 			// 
-			// cbCategoryIncome
+			// cbCategoryExpense
 			// 
-			this.cbCategoryIncome.FormattingEnabled = true;
-			this.cbCategoryIncome.Location = new System.Drawing.Point(148, 35);
-			this.cbCategoryIncome.Margin = new System.Windows.Forms.Padding(11, 7, 11, 7);
-			this.cbCategoryIncome.Name = "cbCategoryIncome";
-			this.cbCategoryIncome.Size = new System.Drawing.Size(376, 32);
-			this.cbCategoryIncome.TabIndex = 15;
+			this.cbCategoryExpense.FormattingEnabled = true;
+			this.cbCategoryExpense.Location = new System.Drawing.Point(148, 35);
+			this.cbCategoryExpense.Margin = new System.Windows.Forms.Padding(11, 7, 11, 7);
+			this.cbCategoryExpense.Name = "cbCategoryExpense";
+			this.cbCategoryExpense.Size = new System.Drawing.Size(376, 32);
+			this.cbCategoryExpense.TabIndex = 15;
 			// 
 			// label1
 			// 
@@ -145,17 +145,17 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(567, 427);
 			this.Controls.Add(this.label4);
-			this.Controls.Add(this.rtbCommentIncome);
-			this.Controls.Add(this.btnCloseIncome);
-			this.Controls.Add(this.btnAddIncome);
+			this.Controls.Add(this.rtbCommentExpense);
+			this.Controls.Add(this.btnCloseExpense);
+			this.Controls.Add(this.btnAddExpense);
 			this.Controls.Add(this.label3);
-			this.Controls.Add(this.dtpDataIncome);
-			this.Controls.Add(this.rtbSumIncome);
+			this.Controls.Add(this.dtpDataExpense);
+			this.Controls.Add(this.rtbSumExpense);
 			this.Controls.Add(this.label2);
-			this.Controls.Add(this.cbCategoryIncome);
+			this.Controls.Add(this.cbCategoryExpense);
 			this.Controls.Add(this.label1);
 			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+			this.Margin = new System.Windows.Forms.Padding(6);
 			this.Name = "Expense";
 			this.Text = "Расходы";
 			this.ResumeLayout(false);
@@ -166,14 +166,14 @@
 		#endregion
 
 		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.RichTextBox rtbCommentIncome;
-		private System.Windows.Forms.Button btnCloseIncome;
-		private System.Windows.Forms.Button btnAddIncome;
+		private System.Windows.Forms.RichTextBox rtbCommentExpense;
+		private System.Windows.Forms.Button btnCloseExpense;
+		private System.Windows.Forms.Button btnAddExpense;
 		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.DateTimePicker dtpDataIncome;
-		private System.Windows.Forms.RichTextBox rtbSumIncome;
+		private System.Windows.Forms.DateTimePicker dtpDataExpense;
+		private System.Windows.Forms.RichTextBox rtbSumExpense;
 		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.ComboBox cbCategoryIncome;
+		private System.Windows.Forms.ComboBox cbCategoryExpense;
 		private System.Windows.Forms.Label label1;
 	}
 }

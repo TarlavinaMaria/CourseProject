@@ -95,6 +95,7 @@ namespace CourseProject
 			if (result == DialogResult.OK)
 			{
 				LoadAction();
+				LoadBalance();
 			}
 		}
 
@@ -105,6 +106,7 @@ namespace CourseProject
 			if (result == DialogResult.OK)
 			{
 				LoadAction();
+				LoadBalance();
 			}
 		}
 
@@ -121,7 +123,7 @@ namespace CourseProject
 				checkCommand.ExecuteNonQuery();
 				connection.Close();
 				LoadAction();
-
+				LoadBalance();
 			}
 			catch (Exception exception)
 			{
@@ -181,6 +183,7 @@ namespace CourseProject
 				string cellValue = dgvInfo.Rows[e.RowIndex].Cells[0].Value.ToString();
 				Info info = new Info(cellValue);
 				info.Show();
+				LoadBalance();
 			}
 			catch (Exception exception)
 			{

@@ -46,7 +46,7 @@ namespace CourseProject
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    rtbCategoryInfo.Text = $"{reader[0]}";
+                    cbCategoryInfo.Text = $"{reader[0]}";
                 }
                 reader.Close();
                 connection.Close();
@@ -142,12 +142,55 @@ namespace CourseProject
 
         private void btnChange_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                string category = cbCategoryInfo.Items.ToString();
+                string sum = rtbSum.Text;
+                MessageBox.Show(this, sum);
+                //??????????????????????????
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(this, exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (connection != null) connection.Close();
+                if (reader != null) reader.Close();
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void cbCategoryInfo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                cbCategoryInfo.Items.Clear();
+
+                string commandLine = @"SELECT CategoryName FROM Category";
+                SqlCommand cmd = new SqlCommand(commandLine, connection);
+                connection.Open();
+                reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    cbCategoryInfo.Items.Add(reader[0]);
+                }
+                reader.Close();
+                connection.Close();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(this, exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (connection != null) connection.Close();
+                if (reader != null) reader.Close();
+            }
         }
     }
 }

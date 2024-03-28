@@ -146,8 +146,7 @@ namespace CourseProject
             {
                 string category = cbCategoryInfo.Items.ToString();
                 string sum = rtbSum.Text;
-                MessageBox.Show(this, sum);
-                //??????????????????????????
+                
             }
             catch (Exception exception)
             {

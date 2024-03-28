@@ -139,7 +139,12 @@ namespace CourseProject
 		private void btnAddCategory_Click(object sender, EventArgs e)
 		{
 			Category category = new Category();
-			category.Show();
+			DialogResult result = category.ShowDialog(this);
+			if (result == DialogResult.OK)
+			{
+				LoadAction();
+				LoadBalance();
+			}
 		}
 
 		private void rtbSearch_TextChanged(object sender, EventArgs e)
@@ -182,8 +187,12 @@ namespace CourseProject
 			{
 				string cellValue = dgvInfo.Rows[e.RowIndex].Cells[0].Value.ToString();
 				Info info = new Info(cellValue);
-				info.Show();
-				LoadBalance();
+				DialogResult result = info.ShowDialog(this);
+				if (result == DialogResult.OK)
+				{
+					LoadAction();
+					LoadBalance();
+				}
 			}
 			catch (Exception exception)
 			{

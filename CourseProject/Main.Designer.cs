@@ -69,6 +69,7 @@
 			this.dgvInfo.BackgroundColor = System.Drawing.Color.LightGray;
 			this.dgvInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvInfo.Location = new System.Drawing.Point(12, 146);
+			this.dgvInfo.MultiSelect = false;
 			this.dgvInfo.Name = "dgvInfo";
 			this.dgvInfo.ReadOnly = true;
 			this.dgvInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;

@@ -89,7 +89,7 @@ namespace CourseProject
 				cmd.Parameters.AddWithValue("@TypeCategory", TypeCategory);
 				cmd.ExecuteNonQuery();
 				MessageBox.Show(this, "Успешно добавлено");
-				Close();
+				connection.Close();
 				Load_CategoryInfo();
 			}
 			catch (Exception exception)

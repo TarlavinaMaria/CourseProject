@@ -55,7 +55,7 @@ namespace CourseProject
 			try
 			{
 				connection.Open();
-				int Sum = Convert.ToInt32(rtbSumExpense.Text);
+				double Sum = Convert.ToDouble(rtbSumExpense.Text.Replace(".", ","));
 				Sum = -Sum;
 				DateTime Date = dtpDataExpense.Value;
 				string Comment = rtbCommentExpense.Text;

@@ -42,7 +42,7 @@
 			// 
 			// rtbSum
 			// 
-			this.rtbSum.Location = new System.Drawing.Point(146, 71);
+			this.rtbSum.Location = new System.Drawing.Point(145, 80);
 			this.rtbSum.Margin = new System.Windows.Forms.Padding(6);
 			this.rtbSum.Name = "rtbSum";
 			this.rtbSum.Size = new System.Drawing.Size(404, 33);
@@ -70,6 +70,7 @@
 			// 
 			// btnChange
 			// 
+			this.btnChange.DialogResult = System.Windows.Forms.DialogResult.OK;
 			this.btnChange.Location = new System.Drawing.Point(262, 270);
 			this.btnChange.Name = "btnChange";
 			this.btnChange.Size = new System.Drawing.Size(127, 41);
@@ -124,12 +125,11 @@
 			// cbCategoryInfo
 			// 
 			this.cbCategoryInfo.FormattingEnabled = true;
-			this.cbCategoryInfo.Location = new System.Drawing.Point(146, 23);
-			this.cbCategoryInfo.Margin = new System.Windows.Forms.Padding(4);
+			this.cbCategoryInfo.Location = new System.Drawing.Point(144, 23);
 			this.cbCategoryInfo.Name = "cbCategoryInfo";
-			this.cbCategoryInfo.Size = new System.Drawing.Size(404, 29);
-			this.cbCategoryInfo.TabIndex = 10;
-			this.cbCategoryInfo.Click += new System.EventHandler(this.cbCategoryInfo_Click);
+			this.cbCategoryInfo.Size = new System.Drawing.Size(405, 29);
+			this.cbCategoryInfo.TabIndex = 11;
+			this.cbCategoryInfo.Click += new System.EventHandler(this.cbCategoryInfo_Click_1);
 			// 
 			// Info
 			// 
@@ -165,6 +165,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RichTextBox rtbComment;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cbCategoryInfo;
-    }
+		private System.Windows.Forms.ComboBox cbCategoryInfo;
+	}
 }

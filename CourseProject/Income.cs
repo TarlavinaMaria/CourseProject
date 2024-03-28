@@ -61,8 +61,8 @@ namespace CourseProject
             try
             {
                 connection.Open();
-                string Sum = rtbSumIncome.Text;
-                DateTime Date = dtpDataIncome.Value;
+				double Sum = Convert.ToDouble(rtbSumIncome.Text.Replace(".", ","));
+				DateTime Date = dtpDataIncome.Value;
                 string Comment = rtbCommentIncome.Text;
 
                 string CategorySelect = cbCategoryIncome.SelectedItem.ToString();
@@ -79,7 +79,8 @@ namespace CourseProject
                 cmd.Parameters.AddWithValue("@Comment", Comment);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show(this, "Успешно добавлено");
-                Close();
+				connection.Close();
+				Close();
             }
             catch (Exception exception)
             {

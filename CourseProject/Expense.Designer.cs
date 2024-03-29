@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Expense));
 			this.label4 = new System.Windows.Forms.Label();
 			this.rtbCommentExpense = new System.Windows.Forms.RichTextBox();
 			this.btnCloseExpense = new System.Windows.Forms.Button();
@@ -143,7 +144,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(567, 427);
+			this.ClientSize = new System.Drawing.Size(567, 385);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.rtbCommentExpense);
 			this.Controls.Add(this.btnCloseExpense);
@@ -155,6 +156,7 @@
 			this.Controls.Add(this.cbCategoryExpense);
 			this.Controls.Add(this.label1);
 			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Margin = new System.Windows.Forms.Padding(6);
 			this.Name = "Expense";
 			this.Text = "Расходы";

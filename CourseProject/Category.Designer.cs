@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Category));
 			this.btnAddCategory = new System.Windows.Forms.Button();
 			this.rtbAddCategory = new System.Windows.Forms.RichTextBox();
 			this.cbTypeCategoryAdd = new System.Windows.Forms.ComboBox();
@@ -42,7 +43,7 @@
 			// btnAddCategory
 			// 
 			this.btnAddCategory.Location = new System.Drawing.Point(20, 155);
-			this.btnAddCategory.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.btnAddCategory.Margin = new System.Windows.Forms.Padding(5);
 			this.btnAddCategory.Name = "btnAddCategory";
 			this.btnAddCategory.Size = new System.Drawing.Size(193, 37);
 			this.btnAddCategory.TabIndex = 0;
@@ -53,7 +54,7 @@
 			// rtbAddCategory
 			// 
 			this.rtbAddCategory.Location = new System.Drawing.Point(200, 19);
-			this.rtbAddCategory.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.rtbAddCategory.Margin = new System.Windows.Forms.Padding(5);
 			this.rtbAddCategory.Name = "rtbAddCategory";
 			this.rtbAddCategory.Size = new System.Drawing.Size(397, 80);
 			this.rtbAddCategory.TabIndex = 1;
@@ -63,7 +64,7 @@
 			// 
 			this.cbTypeCategoryAdd.FormattingEnabled = true;
 			this.cbTypeCategoryAdd.Location = new System.Drawing.Point(200, 111);
-			this.cbTypeCategoryAdd.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.cbTypeCategoryAdd.Margin = new System.Windows.Forms.Padding(5);
 			this.cbTypeCategoryAdd.Name = "cbTypeCategoryAdd";
 			this.cbTypeCategoryAdd.Size = new System.Drawing.Size(397, 29);
 			this.cbTypeCategoryAdd.TabIndex = 2;
@@ -71,7 +72,7 @@
 			// btnExit
 			// 
 			this.btnExit.Location = new System.Drawing.Point(419, 155);
-			this.btnExit.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.btnExit.Margin = new System.Windows.Forms.Padding(5);
 			this.btnExit.Name = "btnExit";
 			this.btnExit.Size = new System.Drawing.Size(178, 37);
 			this.btnExit.TabIndex = 3;
@@ -84,7 +85,7 @@
 			this.dgvCategory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dgvCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvCategory.Location = new System.Drawing.Point(14, 202);
-			this.dgvCategory.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.dgvCategory.Margin = new System.Windows.Forms.Padding(5);
 			this.dgvCategory.MultiSelect = false;
 			this.dgvCategory.Name = "dgvCategory";
 			this.dgvCategory.ReadOnly = true;
@@ -95,7 +96,7 @@
 			// bntDeleteCategory
 			// 
 			this.bntDeleteCategory.Location = new System.Drawing.Point(223, 155);
-			this.bntDeleteCategory.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.bntDeleteCategory.Margin = new System.Windows.Forms.Padding(5);
 			this.bntDeleteCategory.Name = "bntDeleteCategory";
 			this.bntDeleteCategory.Size = new System.Drawing.Size(176, 37);
 			this.bntDeleteCategory.TabIndex = 5;
@@ -137,7 +138,8 @@
 			this.Controls.Add(this.rtbAddCategory);
 			this.Controls.Add(this.btnAddCategory);
 			this.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+			this.Margin = new System.Windows.Forms.Padding(5);
 			this.Name = "Category";
 			this.Text = "Добавить категорию";
 			((System.ComponentModel.ISupportInitialize)(this.dgvCategory)).EndInit();

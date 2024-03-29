@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Income));
 			this.label1 = new System.Windows.Forms.Label();
 			this.cbCategoryIncome = new System.Windows.Forms.ComboBox();
 			this.label2 = new System.Windows.Forms.Label();
@@ -150,6 +151,7 @@
 			this.Controls.Add(this.cbCategoryIncome);
 			this.Controls.Add(this.label1);
 			this.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
 			this.Name = "Income";
 			this.Text = "Доходы";

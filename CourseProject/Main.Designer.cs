@@ -44,6 +44,7 @@
 			this.dtpStopData = new System.Windows.Forms.DateTimePicker();
 			this.btnSeachData = new System.Windows.Forms.Button();
 			this.btnReboot = new System.Windows.Forms.Button();
+			this.btnReport = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dgvInfo)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -152,7 +153,7 @@
 			// 
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label2.Location = new System.Drawing.Point(28, 18);
+			this.label2.Location = new System.Drawing.Point(105, 18);
 			this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(99, 31);
@@ -218,11 +219,23 @@
 			this.btnReboot.UseVisualStyleBackColor = true;
 			this.btnReboot.Click += new System.EventHandler(this.btnReboot_Click);
 			// 
+			// btnReport
+			// 
+			this.btnReport.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReport.BackgroundImage")));
+			this.btnReport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.btnReport.Location = new System.Drawing.Point(17, 13);
+			this.btnReport.Name = "btnReport";
+			this.btnReport.Size = new System.Drawing.Size(75, 48);
+			this.btnReport.TabIndex = 16;
+			this.btnReport.UseVisualStyleBackColor = true;
+			this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
+			// 
 			// Main
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(834, 611);
+			this.Controls.Add(this.btnReport);
 			this.Controls.Add(this.btnReboot);
 			this.Controls.Add(this.btnSeachData);
 			this.Controls.Add(this.dtpStopData);
@@ -271,6 +284,7 @@
 		private System.Windows.Forms.DateTimePicker dtpStopData;
 		private System.Windows.Forms.Button btnSeachData;
 		private System.Windows.Forms.Button btnReboot;
+		private System.Windows.Forms.Button btnReport;
 	}
 }
 

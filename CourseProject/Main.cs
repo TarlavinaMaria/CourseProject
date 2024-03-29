@@ -270,5 +270,10 @@ namespace CourseProject
 		{
 			LoadAction();
 		}
+
+		private void btnReport_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

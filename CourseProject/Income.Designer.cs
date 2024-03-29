@@ -151,8 +151,11 @@
 			this.Controls.Add(this.cbCategoryIncome);
 			this.Controls.Add(this.label1);
 			this.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+			this.MaximizeBox = false;
+			this.MinimizeBox = false;
 			this.Name = "Income";
 			this.Text = "Доходы";
 			this.ResumeLayout(false);

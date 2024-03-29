@@ -41,21 +41,21 @@
 			this.dgvBasket.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dgvBasket.BackgroundColor = System.Drawing.Color.Silver;
 			this.dgvBasket.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgvBasket.Location = new System.Drawing.Point(24, 24);
-			this.dgvBasket.Margin = new System.Windows.Forms.Padding(6);
+			this.dgvBasket.Location = new System.Drawing.Point(22, 21);
+			this.dgvBasket.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
 			this.dgvBasket.MultiSelect = false;
 			this.dgvBasket.Name = "dgvBasket";
 			this.dgvBasket.ReadOnly = true;
 			this.dgvBasket.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.dgvBasket.Size = new System.Drawing.Size(941, 186);
+			this.dgvBasket.Size = new System.Drawing.Size(855, 163);
 			this.dgvBasket.TabIndex = 0;
 			// 
 			// btnClose
 			// 
-			this.btnClose.Location = new System.Drawing.Point(617, 222);
-			this.btnClose.Margin = new System.Windows.Forms.Padding(6);
+			this.btnClose.Location = new System.Drawing.Point(561, 194);
+			this.btnClose.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
 			this.btnClose.Name = "btnClose";
-			this.btnClose.Size = new System.Drawing.Size(348, 42);
+			this.btnClose.Size = new System.Drawing.Size(316, 37);
 			this.btnClose.TabIndex = 1;
 			this.btnClose.Text = "Закрыть";
 			this.btnClose.UseVisualStyleBackColor = true;
@@ -64,10 +64,10 @@
 			// btnReturn
 			// 
 			this.btnReturn.DialogResult = System.Windows.Forms.DialogResult.OK;
-			this.btnReturn.Location = new System.Drawing.Point(24, 222);
-			this.btnReturn.Margin = new System.Windows.Forms.Padding(6);
+			this.btnReturn.Location = new System.Drawing.Point(22, 194);
+			this.btnReturn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
 			this.btnReturn.Name = "btnReturn";
-			this.btnReturn.Size = new System.Drawing.Size(348, 42);
+			this.btnReturn.Size = new System.Drawing.Size(316, 37);
 			this.btnReturn.TabIndex = 2;
 			this.btnReturn.Text = "Вернуть";
 			this.btnReturn.UseVisualStyleBackColor = true;
@@ -75,9 +75,9 @@
 			// 
 			// bntDelete
 			// 
-			this.bntDelete.Location = new System.Drawing.Point(382, 222);
+			this.bntDelete.Location = new System.Drawing.Point(347, 194);
 			this.bntDelete.Name = "bntDelete";
-			this.bntDelete.Size = new System.Drawing.Size(226, 41);
+			this.bntDelete.Size = new System.Drawing.Size(205, 36);
 			this.bntDelete.TabIndex = 3;
 			this.bntDelete.Text = "Удалить";
 			this.bntDelete.UseVisualStyleBackColor = true;
@@ -85,16 +85,19 @@
 			// 
 			// Basket
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(983, 275);
+			this.ClientSize = new System.Drawing.Size(894, 241);
 			this.Controls.Add(this.bntDelete);
 			this.Controls.Add(this.btnReturn);
 			this.Controls.Add(this.btnClose);
 			this.Controls.Add(this.dgvBasket);
-			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.Margin = new System.Windows.Forms.Padding(6);
+			this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.MaximizeBox = false;
+			this.MinimizeBox = false;
 			this.Name = "Basket";
 			this.Text = "Корзина записи";
 			((System.ComponentModel.ISupportInitialize)(this.dgvBasket)).EndInit();

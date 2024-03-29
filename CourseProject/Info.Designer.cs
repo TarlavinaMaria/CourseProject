@@ -148,8 +148,11 @@
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.rtbSum);
 			this.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Margin = new System.Windows.Forms.Padding(6);
+			this.MaximizeBox = false;
+			this.MinimizeBox = false;
 			this.Name = "Info";
 			this.Text = "Информация о записи";
 			this.ResumeLayout(false);

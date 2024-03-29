@@ -42,12 +42,13 @@
 			// 
 			// btnAddCategory
 			// 
+			this.btnAddCategory.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddCategory.BackgroundImage")));
+			this.btnAddCategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnAddCategory.Location = new System.Drawing.Point(20, 155);
 			this.btnAddCategory.Margin = new System.Windows.Forms.Padding(5);
 			this.btnAddCategory.Name = "btnAddCategory";
 			this.btnAddCategory.Size = new System.Drawing.Size(193, 37);
 			this.btnAddCategory.TabIndex = 0;
-			this.btnAddCategory.Text = "Добавить категорию";
 			this.btnAddCategory.UseVisualStyleBackColor = true;
 			this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
 			// 
@@ -71,12 +72,13 @@
 			// 
 			// btnExit
 			// 
+			this.btnExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExit.BackgroundImage")));
+			this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnExit.Location = new System.Drawing.Point(419, 155);
 			this.btnExit.Margin = new System.Windows.Forms.Padding(5);
 			this.btnExit.Name = "btnExit";
 			this.btnExit.Size = new System.Drawing.Size(178, 37);
 			this.btnExit.TabIndex = 3;
-			this.btnExit.Text = "Закрыть";
 			this.btnExit.UseVisualStyleBackColor = true;
 			this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
 			// 
@@ -95,12 +97,13 @@
 			// 
 			// bntDeleteCategory
 			// 
+			this.bntDeleteCategory.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bntDeleteCategory.BackgroundImage")));
+			this.bntDeleteCategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.bntDeleteCategory.Location = new System.Drawing.Point(223, 155);
 			this.bntDeleteCategory.Margin = new System.Windows.Forms.Padding(5);
 			this.bntDeleteCategory.Name = "bntDeleteCategory";
 			this.bntDeleteCategory.Size = new System.Drawing.Size(176, 37);
 			this.bntDeleteCategory.TabIndex = 5;
-			this.bntDeleteCategory.Text = "Удалить";
 			this.bntDeleteCategory.UseVisualStyleBackColor = true;
 			this.bntDeleteCategory.Click += new System.EventHandler(this.bntDeleteCategory_Click);
 			// 

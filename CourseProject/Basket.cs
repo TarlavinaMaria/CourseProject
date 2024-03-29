@@ -33,9 +33,9 @@ namespace CourseProject
 		{
 			try
 			{
+				string ActionID = (string)dgvBasket.SelectedRows[0].Cells[0].Value;
 				if (dgvBasket.Rows.Count > 0)
 				{
-					string ActionID = (string)dgvBasket.SelectedRows[0].Cells[0].Value;
 					connection.Open();
 
 					string queryAdd = "INSERT INTO Action (Category, Sum, Date, Comment) SELECT Category, Sum, Date, Comment FROM Basket WHERE ActionID = @ActionID";
@@ -83,6 +83,7 @@ namespace CourseProject
 					row["Дата"] = Convert.ToDateTime(reader["Дата"]).ToString("dd.MM.yyyy");
 				}
 				dgvBasket.DataSource = table;
+				dgvBasket.Columns[0].Visible = false;
 
 				reader.Close();
 				connection.Close();
@@ -106,9 +107,9 @@ namespace CourseProject
 		{
 			try
 			{
-				if (dgvBasket.Rows.Count > 0)
+				string ActionID = (string)dgvBasket.SelectedRows[0].Cells[0].Value;
+				if (ActionID != null)
 				{
-					string ActionID = (string)dgvBasket.SelectedRows[0].Cells[0].Value;
 					connection.Open();
 
 					string query = "DELETE FROM Basket WHERE ActionID = @ActionID";
@@ -118,8 +119,6 @@ namespace CourseProject
 					connection.Close();
 					LoadAction();
 				}
-
-
 			}
 			catch (Exception exception)
 			{

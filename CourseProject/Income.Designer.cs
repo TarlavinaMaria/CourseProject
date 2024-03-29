@@ -116,22 +116,24 @@
 			// 
 			// btnCloseIncome
 			// 
-			this.btnCloseIncome.Location = new System.Drawing.Point(352, 285);
+			this.btnCloseIncome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCloseIncome.BackgroundImage")));
+			this.btnCloseIncome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.btnCloseIncome.Location = new System.Drawing.Point(375, 275);
 			this.btnCloseIncome.Name = "btnCloseIncome";
-			this.btnCloseIncome.Size = new System.Drawing.Size(141, 41);
+			this.btnCloseIncome.Size = new System.Drawing.Size(118, 66);
 			this.btnCloseIncome.TabIndex = 11;
-			this.btnCloseIncome.Text = "Закрыть";
 			this.btnCloseIncome.UseVisualStyleBackColor = true;
 			this.btnCloseIncome.Click += new System.EventHandler(this.btnCloseIncome_Click);
 			// 
 			// btnAddIncome
 			// 
+			this.btnAddIncome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddIncome.BackgroundImage")));
+			this.btnAddIncome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnAddIncome.DialogResult = System.Windows.Forms.DialogResult.OK;
-			this.btnAddIncome.Location = new System.Drawing.Point(208, 285);
+			this.btnAddIncome.Location = new System.Drawing.Point(236, 275);
 			this.btnAddIncome.Name = "btnAddIncome";
-			this.btnAddIncome.Size = new System.Drawing.Size(127, 41);
+			this.btnAddIncome.Size = new System.Drawing.Size(118, 66);
 			this.btnAddIncome.TabIndex = 10;
-			this.btnAddIncome.Text = "Добавить";
 			this.btnAddIncome.UseVisualStyleBackColor = true;
 			this.btnAddIncome.Click += new System.EventHandler(this.btnAddIncome_Click);
 			// 

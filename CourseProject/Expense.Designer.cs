@@ -54,7 +54,7 @@
 			// rtbCommentExpense
 			// 
 			this.rtbCommentExpense.Location = new System.Drawing.Point(135, 205);
-			this.rtbCommentExpense.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.rtbCommentExpense.Margin = new System.Windows.Forms.Padding(5);
 			this.rtbCommentExpense.Name = "rtbCommentExpense";
 			this.rtbCommentExpense.Size = new System.Drawing.Size(342, 72);
 			this.rtbCommentExpense.TabIndex = 22;
@@ -62,24 +62,26 @@
 			// 
 			// btnCloseExpense
 			// 
-			this.btnCloseExpense.Location = new System.Drawing.Point(335, 287);
-			this.btnCloseExpense.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.btnCloseExpense.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCloseExpense.BackgroundImage")));
+			this.btnCloseExpense.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.btnCloseExpense.Location = new System.Drawing.Point(340, 287);
+			this.btnCloseExpense.Margin = new System.Windows.Forms.Padding(5);
 			this.btnCloseExpense.Name = "btnCloseExpense";
-			this.btnCloseExpense.Size = new System.Drawing.Size(142, 38);
+			this.btnCloseExpense.Size = new System.Drawing.Size(137, 54);
 			this.btnCloseExpense.TabIndex = 21;
-			this.btnCloseExpense.Text = "Закрыть";
 			this.btnCloseExpense.UseVisualStyleBackColor = true;
 			this.btnCloseExpense.Click += new System.EventHandler(this.btnCloseExpense_Click);
 			// 
 			// btnAddExpense
 			// 
+			this.btnAddExpense.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddExpense.BackgroundImage")));
+			this.btnAddExpense.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnAddExpense.DialogResult = System.Windows.Forms.DialogResult.OK;
-			this.btnAddExpense.Location = new System.Drawing.Point(195, 287);
-			this.btnAddExpense.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.btnAddExpense.Location = new System.Drawing.Point(188, 287);
+			this.btnAddExpense.Margin = new System.Windows.Forms.Padding(5);
 			this.btnAddExpense.Name = "btnAddExpense";
-			this.btnAddExpense.Size = new System.Drawing.Size(118, 38);
+			this.btnAddExpense.Size = new System.Drawing.Size(137, 54);
 			this.btnAddExpense.TabIndex = 20;
-			this.btnAddExpense.Text = "Добавить";
 			this.btnAddExpense.UseVisualStyleBackColor = true;
 			this.btnAddExpense.Click += new System.EventHandler(this.btnAddExpense_Click);
 			// 
@@ -96,7 +98,7 @@
 			// dtpDataExpense
 			// 
 			this.dtpDataExpense.Location = new System.Drawing.Point(135, 150);
-			this.dtpDataExpense.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.dtpDataExpense.Margin = new System.Windows.Forms.Padding(5);
 			this.dtpDataExpense.Name = "dtpDataExpense";
 			this.dtpDataExpense.Size = new System.Drawing.Size(342, 29);
 			this.dtpDataExpense.TabIndex = 18;
@@ -104,7 +106,7 @@
 			// rtbSumExpense
 			// 
 			this.rtbSumExpense.Location = new System.Drawing.Point(135, 85);
-			this.rtbSumExpense.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+			this.rtbSumExpense.Margin = new System.Windows.Forms.Padding(6);
 			this.rtbSumExpense.Name = "rtbSumExpense";
 			this.rtbSumExpense.Size = new System.Drawing.Size(342, 37);
 			this.rtbSumExpense.TabIndex = 17;
@@ -144,7 +146,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(515, 337);
+			this.ClientSize = new System.Drawing.Size(515, 347);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.rtbCommentExpense);
 			this.Controls.Add(this.btnCloseExpense);
@@ -158,7 +160,7 @@
 			this.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.Margin = new System.Windows.Forms.Padding(5);
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "Expense";

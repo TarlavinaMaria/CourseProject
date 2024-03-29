@@ -39,58 +39,65 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.bntBasket = new System.Windows.Forms.Button();
+			this.label3 = new System.Windows.Forms.Label();
+			this.dtpStartData = new System.Windows.Forms.DateTimePicker();
+			this.dtpStopData = new System.Windows.Forms.DateTimePicker();
+			this.btnSeachData = new System.Windows.Forms.Button();
+			this.btnReboot = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dgvInfo)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// buttonIncome
 			// 
-			this.buttonIncome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+			this.buttonIncome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonIncome.BackgroundImage")));
+			this.buttonIncome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.buttonIncome.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.buttonIncome.Location = new System.Drawing.Point(17, 68);
 			this.buttonIncome.Margin = new System.Windows.Forms.Padding(4);
 			this.buttonIncome.Name = "buttonIncome";
-			this.buttonIncome.Size = new System.Drawing.Size(168, 59);
+			this.buttonIncome.Size = new System.Drawing.Size(154, 59);
 			this.buttonIncome.TabIndex = 0;
-			this.buttonIncome.Text = "Добавить доход";
 			this.buttonIncome.UseVisualStyleBackColor = true;
 			this.buttonIncome.Click += new System.EventHandler(this.buttonIncome_Click);
 			// 
 			// buttonExpense
 			// 
+			this.buttonExpense.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonExpense.BackgroundImage")));
+			this.buttonExpense.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.buttonExpense.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.buttonExpense.Location = new System.Drawing.Point(655, 68);
+			this.buttonExpense.Location = new System.Drawing.Point(673, 68);
 			this.buttonExpense.Margin = new System.Windows.Forms.Padding(4);
 			this.buttonExpense.Name = "buttonExpense";
-			this.buttonExpense.Size = new System.Drawing.Size(172, 59);
+			this.buttonExpense.Size = new System.Drawing.Size(154, 59);
 			this.buttonExpense.TabIndex = 1;
-			this.buttonExpense.Text = "Добавить расход";
 			this.buttonExpense.UseVisualStyleBackColor = true;
 			this.buttonExpense.Click += new System.EventHandler(this.buttonExpense_Click);
 			// 
 			// dgvInfo
 			// 
-			this.dgvInfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.dgvInfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
 			this.dgvInfo.BackgroundColor = System.Drawing.Color.Silver;
 			this.dgvInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgvInfo.Location = new System.Drawing.Point(17, 204);
+			this.dgvInfo.Location = new System.Drawing.Point(17, 229);
 			this.dgvInfo.Margin = new System.Windows.Forms.Padding(4);
 			this.dgvInfo.MultiSelect = false;
 			this.dgvInfo.Name = "dgvInfo";
 			this.dgvInfo.ReadOnly = true;
 			this.dgvInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.dgvInfo.Size = new System.Drawing.Size(810, 371);
+			this.dgvInfo.Size = new System.Drawing.Size(810, 369);
 			this.dgvInfo.TabIndex = 3;
 			this.dgvInfo.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInfo_CellDoubleClick);
 			// 
 			// buttonDelete
 			// 
+			this.buttonDelete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonDelete.BackgroundImage")));
+			this.buttonDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.buttonDelete.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.buttonDelete.Location = new System.Drawing.Point(378, 68);
+			this.buttonDelete.Location = new System.Drawing.Point(351, 67);
 			this.buttonDelete.Margin = new System.Windows.Forms.Padding(4);
 			this.buttonDelete.Name = "buttonDelete";
-			this.buttonDelete.Size = new System.Drawing.Size(141, 59);
+			this.buttonDelete.Size = new System.Drawing.Size(154, 59);
 			this.buttonDelete.TabIndex = 5;
-			this.buttonDelete.Text = "Удалить запись";
 			this.buttonDelete.UseVisualStyleBackColor = true;
 			this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
 			// 
@@ -119,14 +126,14 @@
 			// 
 			// btnAddCategory
 			// 
-			this.btnAddCategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+			this.btnAddCategory.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddCategory.BackgroundImage")));
+			this.btnAddCategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnAddCategory.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.btnAddCategory.Location = new System.Drawing.Point(193, 68);
+			this.btnAddCategory.Location = new System.Drawing.Point(179, 68);
 			this.btnAddCategory.Margin = new System.Windows.Forms.Padding(4);
 			this.btnAddCategory.Name = "btnAddCategory";
-			this.btnAddCategory.Size = new System.Drawing.Size(177, 59);
+			this.btnAddCategory.Size = new System.Drawing.Size(154, 59);
 			this.btnAddCategory.TabIndex = 7;
-			this.btnAddCategory.Text = "Добавить категорию";
 			this.btnAddCategory.UseVisualStyleBackColor = true;
 			this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
 			// 
@@ -154,19 +161,73 @@
 			// 
 			// bntBasket
 			// 
-			this.bntBasket.Location = new System.Drawing.Point(526, 70);
+			this.bntBasket.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bntBasket.BackgroundImage")));
+			this.bntBasket.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.bntBasket.Location = new System.Drawing.Point(512, 67);
 			this.bntBasket.Name = "bntBasket";
-			this.bntBasket.Size = new System.Drawing.Size(122, 57);
+			this.bntBasket.Size = new System.Drawing.Size(154, 59);
 			this.bntBasket.TabIndex = 10;
-			this.bntBasket.Text = "Корзина";
 			this.bntBasket.UseVisualStyleBackColor = true;
 			this.bntBasket.Click += new System.EventHandler(this.bntBasket_Click);
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label3.Location = new System.Drawing.Point(17, 193);
+			this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(141, 21);
+			this.label3.TabIndex = 11;
+			this.label3.Text = "Поиск по датам:";
+			// 
+			// dtpStartData
+			// 
+			this.dtpStartData.Location = new System.Drawing.Point(212, 193);
+			this.dtpStartData.Name = "dtpStartData";
+			this.dtpStartData.Size = new System.Drawing.Size(200, 29);
+			this.dtpStartData.TabIndex = 12;
+			this.dtpStartData.Value = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
+			// 
+			// dtpStopData
+			// 
+			this.dtpStopData.Location = new System.Drawing.Point(430, 193);
+			this.dtpStopData.Name = "dtpStopData";
+			this.dtpStopData.Size = new System.Drawing.Size(200, 29);
+			this.dtpStopData.TabIndex = 13;
+			// 
+			// btnSeachData
+			// 
+			this.btnSeachData.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSeachData.BackgroundImage")));
+			this.btnSeachData.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.btnSeachData.Location = new System.Drawing.Point(646, 193);
+			this.btnSeachData.Name = "btnSeachData";
+			this.btnSeachData.Size = new System.Drawing.Size(77, 29);
+			this.btnSeachData.TabIndex = 14;
+			this.btnSeachData.UseVisualStyleBackColor = true;
+			this.btnSeachData.Click += new System.EventHandler(this.btnSeachData_Click);
+			// 
+			// btnReboot
+			// 
+			this.btnReboot.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReboot.BackgroundImage")));
+			this.btnReboot.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.btnReboot.Location = new System.Drawing.Point(730, 193);
+			this.btnReboot.Name = "btnReboot";
+			this.btnReboot.Size = new System.Drawing.Size(92, 29);
+			this.btnReboot.TabIndex = 15;
+			this.btnReboot.UseVisualStyleBackColor = true;
+			this.btnReboot.Click += new System.EventHandler(this.btnReboot_Click);
 			// 
 			// Main
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(834, 611);
+			this.Controls.Add(this.btnReboot);
+			this.Controls.Add(this.btnSeachData);
+			this.Controls.Add(this.dtpStopData);
+			this.Controls.Add(this.dtpStartData);
+			this.Controls.Add(this.label3);
 			this.Controls.Add(this.bntBasket);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
@@ -205,6 +266,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Button bntBasket;
+		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.DateTimePicker dtpStartData;
+		private System.Windows.Forms.DateTimePicker dtpStopData;
+		private System.Windows.Forms.Button btnSeachData;
+		private System.Windows.Forms.Button btnReboot;
 	}
 }
 

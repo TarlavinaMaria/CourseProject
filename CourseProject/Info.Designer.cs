@@ -71,22 +71,24 @@
 			// 
 			// btnChange
 			// 
+			this.btnChange.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnChange.BackgroundImage")));
+			this.btnChange.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnChange.DialogResult = System.Windows.Forms.DialogResult.OK;
-			this.btnChange.Location = new System.Drawing.Point(262, 270);
+			this.btnChange.Location = new System.Drawing.Point(224, 256);
 			this.btnChange.Name = "btnChange";
-			this.btnChange.Size = new System.Drawing.Size(127, 41);
+			this.btnChange.Size = new System.Drawing.Size(141, 55);
 			this.btnChange.TabIndex = 4;
-			this.btnChange.Text = "Изменить";
 			this.btnChange.UseVisualStyleBackColor = true;
 			this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
 			// 
 			// btnClose
 			// 
-			this.btnClose.Location = new System.Drawing.Point(408, 270);
+			this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
+			this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.btnClose.Location = new System.Drawing.Point(391, 256);
 			this.btnClose.Name = "btnClose";
-			this.btnClose.Size = new System.Drawing.Size(141, 41);
+			this.btnClose.Size = new System.Drawing.Size(141, 55);
 			this.btnClose.TabIndex = 5;
-			this.btnClose.Text = "Закрыть";
 			this.btnClose.UseVisualStyleBackColor = true;
 			this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
 			// 

@@ -26,6 +26,7 @@ namespace CourseProject
 			InitializeComponent();
 			connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
 			connection = new SqlConnection(connectionString);
+
 			LoadAction();
 			LoadBalance();
 		}
@@ -57,6 +58,7 @@ namespace CourseProject
 		{
 			try
 			{
+
 				string commandLine = @"SELECT ActionID AS '№',
                                     CategoryName AS 'Категория', Sum AS 'Сумма', Date AS 'Дата', Comment AS 'Коментарии'
                                     FROM Action, Category WHERE Category = CategoryID";
@@ -73,6 +75,7 @@ namespace CourseProject
 					row["Дата"] = Convert.ToDateTime(reader["Дата"]).ToString("dd.MM.yyyy");
 				}
 				dgvInfo.DataSource = table;
+				dgvInfo.Columns[0].Visible = false;
 
 				reader.Close();
 				connection.Close();
@@ -220,6 +223,52 @@ namespace CourseProject
 				LoadAction();
 				LoadBalance();
 			}
+		}
+
+		private void btnSeachData_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				connection.Open();
+				DateTime StartDate = dtpStartData.Value;
+				DateTime StopDate = dtpStopData.Value;
+
+				string commandLine = @"SELECT ActionID AS '№',
+                                    CategoryName AS 'Категория', Sum AS 'Сумма', Date AS 'Дата', Comment AS 'Коментарии'
+                                    FROM Action, Category WHERE Category = CategoryID AND Date BETWEEN @StartDate AND @StopDate";
+				SqlCommand cmd = new SqlCommand(commandLine, connection);
+				cmd.Parameters.AddWithValue("@StartDate", StartDate);
+				cmd.Parameters.AddWithValue("@StopDate", StopDate);
+				reader = cmd.ExecuteReader();
+				table = new DataTable();
+				for (int i = 0; i < reader.FieldCount; i++) table.Columns.Add(reader.GetName(i));
+				while (reader.Read())
+				{
+					DataRow row = table.NewRow();
+					for (int i = 0; i < reader.FieldCount; i++) row[i] = reader[i];
+					table.Rows.Add(row);
+					row["Дата"] = Convert.ToDateTime(reader["Дата"]).ToString("dd.MM.yyyy");
+				}
+				dgvInfo.DataSource = table;
+				dgvInfo.Columns[0].Visible = false;
+
+				reader.Close();
+				connection.Close();
+			}
+			catch (Exception exception)
+			{
+				MessageBox.Show(this, exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+			finally
+			{
+				if (connection != null) connection.Close();
+				if (reader != null) reader.Close();
+			}
+		}
+
+		private void btnReboot_Click(object sender, EventArgs e)
+		{
+			LoadAction();
 		}
 	}
 }

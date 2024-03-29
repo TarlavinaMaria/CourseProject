@@ -118,7 +118,7 @@ namespace CourseProject
 				string ActionID = (string)dgvInfo.SelectedRows[0].Cells[0].Value;
 				connection.Open();
 
-				string queryAdd = "INSERT INTO Basket (ActionID, Category, Sum, Date, Comment) SELECT ActionID, Category, Sum, Date, Comment FROM Action WHERE ActionID = @ActionID";
+				string queryAdd = "INSERT INTO Basket (Category, Sum, Date, Comment) SELECT Category, Sum, Date, Comment FROM Action WHERE ActionID = @ActionID";
 				SqlCommand checkCommandAdd = new SqlCommand(queryAdd, connection);
 				checkCommandAdd.Parameters.AddWithValue("@ActionID", ActionID);
 				checkCommandAdd.ExecuteNonQuery();

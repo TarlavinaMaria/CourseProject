@@ -73,6 +73,7 @@
 			this.dgvInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvInfo.Location = new System.Drawing.Point(17, 204);
 			this.dgvInfo.Margin = new System.Windows.Forms.Padding(4);
+			this.dgvInfo.MultiSelect = false;
 			this.dgvInfo.Name = "dgvInfo";
 			this.dgvInfo.ReadOnly = true;
 			this.dgvInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;

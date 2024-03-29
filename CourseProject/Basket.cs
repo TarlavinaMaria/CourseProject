@@ -31,7 +31,33 @@ namespace CourseProject
 
 		private void btnReturn_Click(object sender, EventArgs e)
 		{
+			try
+			{
+				string ActionID = (string)dgvBasket.SelectedRows[0].Cells[0].Value;
+				connection.Open();
 
+				string queryAdd = "INSERT INTO Action (Category, Sum, Date, Comment) SELECT Category, Sum, Date, Comment FROM Basket WHERE ActionID = @ActionID";
+				SqlCommand checkCommandAdd = new SqlCommand(queryAdd, connection);
+				checkCommandAdd.Parameters.AddWithValue("@ActionID", ActionID);
+				checkCommandAdd.ExecuteNonQuery();
+
+				string query = "DELETE FROM Basket WHERE ActionID = @ActionID";
+				SqlCommand checkCommand = new SqlCommand(query, connection);
+				checkCommand.Parameters.AddWithValue("@ActionID", ActionID);
+				checkCommand.ExecuteNonQuery();
+				connection.Close();
+				LoadAction();
+				
+			}
+			catch (Exception exception)
+			{
+				MessageBox.Show(this, exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+			finally
+			{
+				if (connection != null) connection.Close();
+				if (reader != null) reader.Close();
+			}
 		}
 		public void LoadAction()
 		{

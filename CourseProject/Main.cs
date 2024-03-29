@@ -117,6 +117,12 @@ namespace CourseProject
 			{
 				string ActionID = (string)dgvInfo.SelectedRows[0].Cells[0].Value;
 				connection.Open();
+
+				string queryAdd = "INSERT INTO Basket (ActionID, Category, Sum, Date, Comment) SELECT ActionID, Category, Sum, Date, Comment FROM Action WHERE ActionID = @ActionID";
+				SqlCommand checkCommandAdd = new SqlCommand(queryAdd, connection);
+				checkCommandAdd.Parameters.AddWithValue("@ActionID", ActionID);
+				checkCommandAdd.ExecuteNonQuery();
+
 				string query = "DELETE FROM Action WHERE ActionID = @ActionID";
 				SqlCommand checkCommand = new SqlCommand(query, connection);
 				checkCommand.Parameters.AddWithValue("@ActionID", ActionID);
@@ -202,6 +208,17 @@ namespace CourseProject
 			{
 				if (connection != null) connection.Close();
 				if (reader != null) reader.Close();
+			}
+		}
+
+		private void bntBasket_Click(object sender, EventArgs e)
+		{
+			Basket basket = new Basket();
+			DialogResult result = basket.ShowDialog(this);
+			if (result == DialogResult.OK)
+			{
+				LoadAction();
+				LoadBalance();
 			}
 		}
 	}

@@ -38,14 +38,15 @@
 			this.btnAddCategory = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
+			this.bntBasket = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dgvInfo)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// buttonIncome
 			// 
 			this.buttonIncome.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.buttonIncome.Location = new System.Drawing.Point(23, 71);
-			this.buttonIncome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.buttonIncome.Location = new System.Drawing.Point(17, 68);
+			this.buttonIncome.Margin = new System.Windows.Forms.Padding(4);
 			this.buttonIncome.Name = "buttonIncome";
 			this.buttonIncome.Size = new System.Drawing.Size(168, 59);
 			this.buttonIncome.TabIndex = 0;
@@ -56,8 +57,8 @@
 			// buttonExpense
 			// 
 			this.buttonExpense.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.buttonExpense.Location = new System.Drawing.Point(655, 73);
-			this.buttonExpense.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.buttonExpense.Location = new System.Drawing.Point(655, 68);
+			this.buttonExpense.Margin = new System.Windows.Forms.Padding(4);
 			this.buttonExpense.Name = "buttonExpense";
 			this.buttonExpense.Size = new System.Drawing.Size(172, 59);
 			this.buttonExpense.TabIndex = 1;
@@ -71,7 +72,7 @@
 			this.dgvInfo.BackgroundColor = System.Drawing.Color.LightGray;
 			this.dgvInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvInfo.Location = new System.Drawing.Point(17, 204);
-			this.dgvInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.dgvInfo.Margin = new System.Windows.Forms.Padding(4);
 			this.dgvInfo.Name = "dgvInfo";
 			this.dgvInfo.ReadOnly = true;
 			this.dgvInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -82,10 +83,10 @@
 			// buttonDelete
 			// 
 			this.buttonDelete.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.buttonDelete.Location = new System.Drawing.Point(454, 71);
-			this.buttonDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.buttonDelete.Location = new System.Drawing.Point(378, 68);
+			this.buttonDelete.Margin = new System.Windows.Forms.Padding(4);
 			this.buttonDelete.Name = "buttonDelete";
-			this.buttonDelete.Size = new System.Drawing.Size(193, 59);
+			this.buttonDelete.Size = new System.Drawing.Size(141, 59);
 			this.buttonDelete.TabIndex = 5;
 			this.buttonDelete.Text = "Удалить запись";
 			this.buttonDelete.UseVisualStyleBackColor = true;
@@ -95,7 +96,7 @@
 			// 
 			this.rtbSearch.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.rtbSearch.Location = new System.Drawing.Point(212, 140);
-			this.rtbSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.rtbSearch.Margin = new System.Windows.Forms.Padding(4);
 			this.rtbSearch.Name = "rtbSearch";
 			this.rtbSearch.Size = new System.Drawing.Size(615, 46);
 			this.rtbSearch.TabIndex = 6;
@@ -106,7 +107,7 @@
 			// 
 			this.rtbBalance.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.rtbBalance.Location = new System.Drawing.Point(212, 18);
-			this.rtbBalance.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.rtbBalance.Margin = new System.Windows.Forms.Padding(4);
 			this.rtbBalance.Name = "rtbBalance";
 			this.rtbBalance.ReadOnly = true;
 			this.rtbBalance.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -117,10 +118,10 @@
 			// btnAddCategory
 			// 
 			this.btnAddCategory.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.btnAddCategory.Location = new System.Drawing.Point(212, 71);
-			this.btnAddCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnAddCategory.Location = new System.Drawing.Point(193, 68);
+			this.btnAddCategory.Margin = new System.Windows.Forms.Padding(4);
 			this.btnAddCategory.Name = "btnAddCategory";
-			this.btnAddCategory.Size = new System.Drawing.Size(216, 59);
+			this.btnAddCategory.Size = new System.Drawing.Size(177, 59);
 			this.btnAddCategory.TabIndex = 7;
 			this.btnAddCategory.Text = "Добавить категорию";
 			this.btnAddCategory.UseVisualStyleBackColor = true;
@@ -148,11 +149,22 @@
 			this.label2.TabIndex = 9;
 			this.label2.Text = "Баланс:";
 			// 
+			// bntBasket
+			// 
+			this.bntBasket.Location = new System.Drawing.Point(526, 70);
+			this.bntBasket.Name = "bntBasket";
+			this.bntBasket.Size = new System.Drawing.Size(122, 57);
+			this.bntBasket.TabIndex = 10;
+			this.bntBasket.Text = "Корзина";
+			this.bntBasket.UseVisualStyleBackColor = true;
+			this.bntBasket.Click += new System.EventHandler(this.bntBasket_Click);
+			// 
 			// Main
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(834, 611);
+			this.Controls.Add(this.bntBasket);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.btnAddCategory);
@@ -186,6 +198,7 @@
         private System.Windows.Forms.Button btnAddCategory;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-    }
+		private System.Windows.Forms.Button bntBasket;
+	}
 }
 

@@ -39,6 +39,7 @@
 			// dgvBasket
 			// 
 			this.dgvBasket.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.dgvBasket.BackgroundColor = System.Drawing.Color.Silver;
 			this.dgvBasket.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvBasket.Location = new System.Drawing.Point(24, 24);
 			this.dgvBasket.Margin = new System.Windows.Forms.Padding(6);
@@ -86,7 +87,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1019, 275);
+			this.ClientSize = new System.Drawing.Size(983, 275);
 			this.Controls.Add(this.bntDelete);
 			this.Controls.Add(this.btnReturn);
 			this.Controls.Add(this.btnClose);

@@ -44,6 +44,7 @@
 			// 
 			// buttonIncome
 			// 
+			this.buttonIncome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
 			this.buttonIncome.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.buttonIncome.Location = new System.Drawing.Point(17, 68);
 			this.buttonIncome.Margin = new System.Windows.Forms.Padding(4);
@@ -69,7 +70,7 @@
 			// dgvInfo
 			// 
 			this.dgvInfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-			this.dgvInfo.BackgroundColor = System.Drawing.Color.LightGray;
+			this.dgvInfo.BackgroundColor = System.Drawing.Color.Silver;
 			this.dgvInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvInfo.Location = new System.Drawing.Point(17, 204);
 			this.dgvInfo.Margin = new System.Windows.Forms.Padding(4);
@@ -118,6 +119,7 @@
 			// 
 			// btnAddCategory
 			// 
+			this.btnAddCategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
 			this.btnAddCategory.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.btnAddCategory.Location = new System.Drawing.Point(193, 68);
 			this.btnAddCategory.Margin = new System.Windows.Forms.Padding(4);

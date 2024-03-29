@@ -154,8 +154,12 @@ namespace CourseProject
 				
 				DateTime Date = dtpData.Value;
 				string Comment = rtbComment.Text;
-
-				string CategorySelect = cbCategoryInfo.SelectedItem.ToString();
+				string CategorySelect;
+				if(cbCategoryInfo.SelectedItem == null) 
+				{
+					CategorySelect = cbCategoryInfo.Text; 
+				}
+				else CategorySelect = cbCategoryInfo.SelectedItem.ToString();
 				string commandCategory = $"SELECT CategoryID FROM Category WHERE CategoryName = '{CategorySelect}'";
 				SqlCommand cmdCategory = new SqlCommand(commandCategory, connection);
 				int Category = Convert.ToInt32(cmdCategory.ExecuteScalar());
@@ -188,11 +192,11 @@ namespace CourseProject
 			Close();
 		}
 
-		private void cbCategoryInfo_Click_1(object sender, EventArgs e)
+		private void cbCategoryInfo_DropDown(object sender, EventArgs e)
 		{
 			try
 			{
-				//cbCategoryInfo.Items.Clear();
+				cbCategoryInfo.Items.Clear();
 
 				string commandLine = @"SELECT CategoryName FROM Category";
 				SqlCommand cmd = new SqlCommand(commandLine, connection);
@@ -214,6 +218,7 @@ namespace CourseProject
 				if (connection != null) connection.Close();
 				if (reader != null) reader.Close();
 			}
+
 		}
 	}
 }

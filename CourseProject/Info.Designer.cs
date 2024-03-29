@@ -129,7 +129,7 @@
 			this.cbCategoryInfo.Name = "cbCategoryInfo";
 			this.cbCategoryInfo.Size = new System.Drawing.Size(405, 29);
 			this.cbCategoryInfo.TabIndex = 11;
-			this.cbCategoryInfo.Click += new System.EventHandler(this.cbCategoryInfo_Click_1);
+			this.cbCategoryInfo.DropDown += new System.EventHandler(this.cbCategoryInfo_DropDown);
 			// 
 			// Info
 			// 

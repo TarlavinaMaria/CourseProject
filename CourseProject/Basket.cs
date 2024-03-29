@@ -33,21 +33,25 @@ namespace CourseProject
 		{
 			try
 			{
-				string ActionID = (string)dgvBasket.SelectedRows[0].Cells[0].Value;
-				connection.Open();
+				if (dgvBasket.Rows.Count > 0)
+				{
+					string ActionID = (string)dgvBasket.SelectedRows[0].Cells[0].Value;
+					connection.Open();
 
-				string queryAdd = "INSERT INTO Action (Category, Sum, Date, Comment) SELECT Category, Sum, Date, Comment FROM Basket WHERE ActionID = @ActionID";
-				SqlCommand checkCommandAdd = new SqlCommand(queryAdd, connection);
-				checkCommandAdd.Parameters.AddWithValue("@ActionID", ActionID);
-				checkCommandAdd.ExecuteNonQuery();
+					string queryAdd = "INSERT INTO Action (Category, Sum, Date, Comment) SELECT Category, Sum, Date, Comment FROM Basket WHERE ActionID = @ActionID";
+					SqlCommand checkCommandAdd = new SqlCommand(queryAdd, connection);
+					checkCommandAdd.Parameters.AddWithValue("@ActionID", ActionID);
+					checkCommandAdd.ExecuteNonQuery();
 
-				string query = "DELETE FROM Basket WHERE ActionID = @ActionID";
-				SqlCommand checkCommand = new SqlCommand(query, connection);
-				checkCommand.Parameters.AddWithValue("@ActionID", ActionID);
-				checkCommand.ExecuteNonQuery();
-				connection.Close();
-				LoadAction();
-				
+					string query = "DELETE FROM Basket WHERE ActionID = @ActionID";
+					SqlCommand checkCommand = new SqlCommand(query, connection);
+					checkCommand.Parameters.AddWithValue("@ActionID", ActionID);
+					checkCommand.ExecuteNonQuery();
+					connection.Close();
+					LoadAction();
+
+				}
+
 			}
 			catch (Exception exception)
 			{
@@ -102,15 +106,19 @@ namespace CourseProject
 		{
 			try
 			{
-				string ActionID = (string)dgvBasket.SelectedRows[0].Cells[0].Value;
-				connection.Open();
+				if (dgvBasket.Rows.Count > 0)
+				{
+					string ActionID = (string)dgvBasket.SelectedRows[0].Cells[0].Value;
+					connection.Open();
 
-				string query = "DELETE FROM Basket WHERE ActionID = @ActionID";
-				SqlCommand checkCommand = new SqlCommand(query, connection);
-				checkCommand.Parameters.AddWithValue("@ActionID", ActionID);
-				checkCommand.ExecuteNonQuery();
-				connection.Close();
-				LoadAction();
+					string query = "DELETE FROM Basket WHERE ActionID = @ActionID";
+					SqlCommand checkCommand = new SqlCommand(query, connection);
+					checkCommand.Parameters.AddWithValue("@ActionID", ActionID);
+					checkCommand.ExecuteNonQuery();
+					connection.Close();
+					LoadAction();
+				}
+
 
 			}
 			catch (Exception exception)

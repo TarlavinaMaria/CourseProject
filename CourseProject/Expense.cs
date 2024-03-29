@@ -54,26 +54,29 @@ namespace CourseProject
 		{
 			try
 			{
-				connection.Open();
-				double Sum = Convert.ToDouble(rtbSumExpense.Text.Replace(".", ","));
-				Sum = -Sum;
-				DateTime Date = dtpDataExpense.Value;
-				string Comment = rtbCommentExpense.Text;
+				if (!string.IsNullOrEmpty(rtbSumExpense.Text) && cbCategoryExpense.SelectedItem != null)
+				{
+					connection.Open();
+					double Sum = Convert.ToDouble(rtbSumExpense.Text.Replace(".", ","));
+					Sum = -Sum;
+					DateTime Date = dtpDataExpense.Value;
+					string Comment = rtbCommentExpense.Text;
 
-				string CategorySelect = cbCategoryExpense.SelectedItem.ToString();
-				string commandCategory = $"SELECT CategoryID FROM Category WHERE CategoryName = '{CategorySelect}'";
-				SqlCommand cmdCategory = new SqlCommand(commandCategory, connection);
-				int Category = Convert.ToInt32(cmdCategory.ExecuteScalar());
+					string CategorySelect = cbCategoryExpense.SelectedItem.ToString();
+					string commandCategory = $"SELECT CategoryID FROM Category WHERE CategoryName = '{CategorySelect}'";
+					SqlCommand cmdCategory = new SqlCommand(commandCategory, connection);
+					int Category = Convert.ToInt32(cmdCategory.ExecuteScalar());
 
-				string query = "INSERT INTO Action (Category, Sum, Date, Comment) VALUES (@Category, @Sum, @Date, @Comment)";
-				SqlCommand cmd = new SqlCommand(query, connection);
-				cmd.Parameters.AddWithValue("@Category", Category);
-				cmd.Parameters.AddWithValue("@Sum", Sum);
-				cmd.Parameters.AddWithValue("@Date", Date);
-				cmd.Parameters.AddWithValue("@Comment", Comment);
-				cmd.ExecuteNonQuery();
-				MessageBox.Show(this, "Успешно добавлено");
-				Close();
+					string query = "INSERT INTO Action (Category, Sum, Date, Comment) VALUES (@Category, @Sum, @Date, @Comment)";
+					SqlCommand cmd = new SqlCommand(query, connection);
+					cmd.Parameters.AddWithValue("@Category", Category);
+					cmd.Parameters.AddWithValue("@Sum", Sum);
+					cmd.Parameters.AddWithValue("@Date", Date);
+					cmd.Parameters.AddWithValue("@Comment", Comment);
+					cmd.ExecuteNonQuery();
+					MessageBox.Show(this, "Успешно добавлено");
+					Close();
+				}
 			}
 			catch (Exception exception)
 			{

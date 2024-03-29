@@ -69,28 +69,32 @@ namespace CourseProject
 
 			try
 			{
-				connection.Open();
-
-				string CategoryName = rtbAddCategory.Text;
-				string Type= cbTypeCategoryAdd.SelectedItem.ToString();
-				bool TypeCategory;
-				if (Type == "Доход")
+				if (!string.IsNullOrEmpty(rtbAddCategory.Text) && cbTypeCategoryAdd.SelectedItem != null)
 				{
-					TypeCategory = true;
-				}
-				else
-				{
-					TypeCategory = false;
-				}
+					connection.Open();
 
-				string query = "INSERT INTO Category (CategoryName, TypeCategory) VALUES (@CategoryName, @TypeCategory)";
-				SqlCommand cmd = new SqlCommand(query, connection);
-				cmd.Parameters.AddWithValue("@CategoryName", CategoryName);
-				cmd.Parameters.AddWithValue("@TypeCategory", TypeCategory);
-				cmd.ExecuteNonQuery();
-				MessageBox.Show(this, "Успешно добавлено");
-				connection.Close();
-				Load_CategoryInfo();
+					string CategoryName = rtbAddCategory.Text;
+					string Type = cbTypeCategoryAdd.SelectedItem.ToString();
+					bool TypeCategory;
+					if (Type == "Доход")
+					{
+						TypeCategory = true;
+					}
+					else
+					{
+						TypeCategory = false;
+					}
+
+					string query = "INSERT INTO Category (CategoryName, TypeCategory) VALUES (@CategoryName, @TypeCategory)";
+					SqlCommand cmd = new SqlCommand(query, connection);
+					cmd.Parameters.AddWithValue("@CategoryName", CategoryName);
+					cmd.Parameters.AddWithValue("@TypeCategory", TypeCategory);
+					cmd.ExecuteNonQuery();
+					MessageBox.Show(this, "Успешно добавлено");
+					connection.Close();
+					Load_CategoryInfo();
+
+				}
 			}
 			catch (Exception exception)
 			{
@@ -112,14 +116,17 @@ namespace CourseProject
 		{
 			try
 			{
-				string CategoryID = (string)dgvCategory.SelectedRows[0].Cells[0].Value;
-				connection.Open();
-				string query = "DELETE FROM Category WHERE CategoryID = @CategoryID";
-				SqlCommand checkCommand = new SqlCommand(query, connection);
-				checkCommand.Parameters.AddWithValue("@CategoryID", CategoryID);
-				checkCommand.ExecuteNonQuery();
-				connection.Close();
-				Load_CategoryInfo();
+				if (dgvCategory.Rows.Count > 0)
+				{
+					string CategoryID = (string)dgvCategory.SelectedRows[0].Cells[0].Value;
+					connection.Open();
+					string query = "DELETE FROM Category WHERE CategoryID = @CategoryID";
+					SqlCommand checkCommand = new SqlCommand(query, connection);
+					checkCommand.Parameters.AddWithValue("@CategoryID", CategoryID);
+					checkCommand.ExecuteNonQuery();
+					connection.Close();
+					Load_CategoryInfo(); 
+				}
 			}
 			catch (Exception exception)
 			{

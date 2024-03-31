@@ -12,6 +12,8 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.Diagnostics;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Runtime.InteropServices.ComTypes;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 
 namespace CourseProject
 {
@@ -36,12 +38,30 @@ namespace CourseProject
 			{
 				connection.Open();
 				string commandLine = @"SELECT SUM(Sum) FROM Action";
+
 				SqlCommand cmd = new SqlCommand(commandLine, connection);
 				decimal sum = (decimal)cmd.ExecuteScalar();
 				rtbBalance.Text = $"{sum}";
 				rtbBalance.SelectionAlignment = HorizontalAlignment.Center;
 				if (sum < 0) { rtbBalance.ForeColor = Color.Red; }
 				else { rtbBalance.ForeColor = Color.Green; }
+
+				string commandIncome = @"SELECT SUM(Sum) FROM Action WHERE Sum > 0";
+				SqlCommand cmdIncome = new SqlCommand(commandIncome, connection);
+				decimal sumIncome = (decimal)cmdIncome.ExecuteScalar();
+				rtbIncome.Text = $"Доход всего: {sumIncome}";
+				rtbIncome.SelectionAlignment = HorizontalAlignment.Center;
+				rtbIncome.ForeColor = Color.Green;
+
+				string commandExpense = @"SELECT SUM(Sum) FROM Action WHERE Sum < 0";
+				SqlCommand cmdExpense = new SqlCommand(commandExpense, connection);
+				decimal sumExpense = (decimal)cmdExpense.ExecuteScalar();
+				rtbExpense.Text = $"Расход всего: {sumExpense}";
+				rtbExpense.SelectionAlignment = HorizontalAlignment.Center;
+				rtbExpense.ForeColor = Color.Red;
+
+
+
 				connection.Close();
 			}
 			catch (Exception exception)
@@ -229,10 +249,11 @@ namespace CourseProject
 		{
 			try
 			{
-				connection.Open();
 				DateTime StartDate = dtpStartData.Value;
 				DateTime StopDate = dtpStopData.Value;
 
+
+				connection.Open();
 				string commandLine = @"SELECT ActionID AS '№',
                                     CategoryName AS 'Категория', Sum AS 'Сумма', Date AS 'Дата', Comment AS 'Коментарии'
                                     FROM Action, Category WHERE Category = CategoryID AND Date BETWEEN @StartDate AND @StopDate";
@@ -254,6 +275,8 @@ namespace CourseProject
 
 				reader.Close();
 				connection.Close();
+				IncomeExpenseBalanse();
+
 			}
 			catch (Exception exception)
 			{
@@ -265,10 +288,60 @@ namespace CourseProject
 				if (reader != null) reader.Close();
 			}
 		}
+		void IncomeExpenseBalanse()
+		{
 
+			try
+			{
+				connection.Open();
+
+				DateTime StartDate = dtpStartData.Value;
+				DateTime StopDate = dtpStopData.Value;
+				string commandBalanse = @"SELECT SUM(Sum) FROM Action WHERE Date BETWEEN @StartDate AND @StopDate";
+				SqlCommand cmdBalanse = new SqlCommand(commandBalanse, connection);
+				cmdBalanse.Parameters.AddWithValue("@StartDate", StartDate);
+				cmdBalanse.Parameters.AddWithValue("@StopDate", StopDate);
+				decimal sum = (decimal)cmdBalanse.ExecuteScalar();
+				rtbBalance.Text = $"{sum}";
+				rtbBalance.SelectionAlignment = HorizontalAlignment.Center;
+				if (sum < 0) { rtbBalance.ForeColor = Color.Red; }
+				else { rtbBalance.ForeColor = Color.Green; }
+
+				string commandIncome = @"SELECT SUM(Sum) FROM Action WHERE Date BETWEEN @StartDate AND @StopDate AND Sum > 0";
+				SqlCommand cmdIncome = new SqlCommand(commandIncome, connection);
+				cmdIncome.Parameters.AddWithValue("@StartDate", StartDate);
+				cmdIncome.Parameters.AddWithValue("@StopDate", StopDate);
+				decimal sumIncome = (decimal)cmdIncome.ExecuteScalar();
+				rtbIncome.Text = $"Доход за период: {sumIncome}";
+				rtbIncome.SelectionAlignment = HorizontalAlignment.Center;
+				rtbIncome.ForeColor = Color.Green;
+
+				string commandExpense = @"SELECT SUM(Sum) FROM Action WHERE Date BETWEEN @StartDate AND @StopDate AND Sum < 0";
+				SqlCommand cmdExpense = new SqlCommand(commandExpense, connection);
+				cmdExpense.Parameters.AddWithValue("@StartDate", StartDate);
+				cmdExpense.Parameters.AddWithValue("@StopDate", StopDate);
+				decimal sumExpense = (decimal)cmdExpense.ExecuteScalar();
+				rtbExpense.Text = $"Расход за период: {sumExpense}";
+				rtbExpense.SelectionAlignment = HorizontalAlignment.Center;
+				rtbExpense.ForeColor = Color.Red;
+
+				reader.Close();
+				connection.Close();
+			}
+			catch (Exception exception)
+			{
+				MessageBox.Show(this, exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+			finally
+			{
+				if (connection != null) connection.Close();
+				if (reader != null) reader.Close();
+			}
+		}
 		private void btnReboot_Click(object sender, EventArgs e)
 		{
 			LoadAction();
+			LoadBalance();
 		}
 
 		private void btnReport_Click(object sender, EventArgs e)

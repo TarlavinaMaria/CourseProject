@@ -44,7 +44,8 @@
 			this.dtpStopData = new System.Windows.Forms.DateTimePicker();
 			this.btnSeachData = new System.Windows.Forms.Button();
 			this.btnReboot = new System.Windows.Forms.Button();
-			this.btnReport = new System.Windows.Forms.Button();
+			this.rtbIncome = new System.Windows.Forms.RichTextBox();
+			this.rtbExpense = new System.Windows.Forms.RichTextBox();
 			((System.ComponentModel.ISupportInitialize)(this.dgvInfo)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -116,12 +117,12 @@
 			// rtbBalance
 			// 
 			this.rtbBalance.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.rtbBalance.Location = new System.Drawing.Point(212, 18);
+			this.rtbBalance.Location = new System.Drawing.Point(118, 13);
 			this.rtbBalance.Margin = new System.Windows.Forms.Padding(4);
 			this.rtbBalance.Name = "rtbBalance";
 			this.rtbBalance.ReadOnly = true;
 			this.rtbBalance.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.rtbBalance.Size = new System.Drawing.Size(615, 42);
+			this.rtbBalance.Size = new System.Drawing.Size(168, 47);
 			this.rtbBalance.TabIndex = 2;
 			this.rtbBalance.Text = "";
 			// 
@@ -153,7 +154,7 @@
 			// 
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label2.Location = new System.Drawing.Point(105, 18);
+			this.label2.Location = new System.Drawing.Point(11, 13);
 			this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(99, 31);
@@ -196,6 +197,7 @@
 			this.dtpStopData.Name = "dtpStopData";
 			this.dtpStopData.Size = new System.Drawing.Size(200, 29);
 			this.dtpStopData.TabIndex = 13;
+			this.dtpStopData.Value = new System.DateTime(2024, 3, 31, 0, 0, 0, 0);
 			// 
 			// btnSeachData
 			// 
@@ -219,23 +221,37 @@
 			this.btnReboot.UseVisualStyleBackColor = true;
 			this.btnReboot.Click += new System.EventHandler(this.btnReboot_Click);
 			// 
-			// btnReport
+			// rtbIncome
 			// 
-			this.btnReport.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReport.BackgroundImage")));
-			this.btnReport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.btnReport.Location = new System.Drawing.Point(17, 13);
-			this.btnReport.Name = "btnReport";
-			this.btnReport.Size = new System.Drawing.Size(75, 48);
-			this.btnReport.TabIndex = 16;
-			this.btnReport.UseVisualStyleBackColor = true;
-			this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
+			this.rtbIncome.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.rtbIncome.Location = new System.Drawing.Point(294, 12);
+			this.rtbIncome.Margin = new System.Windows.Forms.Padding(4);
+			this.rtbIncome.Name = "rtbIncome";
+			this.rtbIncome.ReadOnly = true;
+			this.rtbIncome.RightToLeft = System.Windows.Forms.RightToLeft.No;
+			this.rtbIncome.Size = new System.Drawing.Size(262, 47);
+			this.rtbIncome.TabIndex = 16;
+			this.rtbIncome.Text = "";
+			// 
+			// rtbExpense
+			// 
+			this.rtbExpense.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.rtbExpense.Location = new System.Drawing.Point(560, 13);
+			this.rtbExpense.Margin = new System.Windows.Forms.Padding(4);
+			this.rtbExpense.Name = "rtbExpense";
+			this.rtbExpense.ReadOnly = true;
+			this.rtbExpense.RightToLeft = System.Windows.Forms.RightToLeft.No;
+			this.rtbExpense.Size = new System.Drawing.Size(262, 47);
+			this.rtbExpense.TabIndex = 17;
+			this.rtbExpense.Text = "";
 			// 
 			// Main
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(834, 611);
-			this.Controls.Add(this.btnReport);
+			this.Controls.Add(this.rtbExpense);
+			this.Controls.Add(this.rtbIncome);
 			this.Controls.Add(this.btnReboot);
 			this.Controls.Add(this.btnSeachData);
 			this.Controls.Add(this.dtpStopData);
@@ -284,7 +300,8 @@
 		private System.Windows.Forms.DateTimePicker dtpStopData;
 		private System.Windows.Forms.Button btnSeachData;
 		private System.Windows.Forms.Button btnReboot;
-		private System.Windows.Forms.Button btnReport;
+		private System.Windows.Forms.RichTextBox rtbIncome;
+		private System.Windows.Forms.RichTextBox rtbExpense;
 	}
 }
 

@@ -50,7 +50,7 @@ namespace CourseProject
 					table.Rows.Add(row);
 				}
 				dgvCategory.DataSource = table;
-
+				dgvCategory.Columns[0].Visible = false;
 				reader.Close();
 				connection.Close();
 			}

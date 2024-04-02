@@ -134,7 +134,7 @@
 			this.btnAddCategory.Location = new System.Drawing.Point(179, 68);
 			this.btnAddCategory.Margin = new System.Windows.Forms.Padding(4);
 			this.btnAddCategory.Name = "btnAddCategory";
-			this.btnAddCategory.Size = new System.Drawing.Size(154, 59);
+			this.btnAddCategory.Size = new System.Drawing.Size(164, 59);
 			this.btnAddCategory.TabIndex = 7;
 			this.btnAddCategory.UseVisualStyleBackColor = true;
 			this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
